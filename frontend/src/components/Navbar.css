@@ -1,0 +1,138 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 0 4%;
+  transition: background-color 0.3s ease;
+  background: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+}
+
+.navbar-scrolled {
+  background-color: #141414;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #e50914;
+  cursor: pointer;
+  margin: 0;
+  letter-spacing: 0.5px;
+  transition: transform 0.2s ease;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.05);
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-link {
+  color: #e5e5e5;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #b3b3b3;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-form {
+  animation: slideIn 0.3s ease;
+}
+
+.search-input {
+  background-color: rgba(0, 0, 0, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  color: #fff;
+  padding: 6px 12px;
+  font-size: 14px;
+  outline: none;
+  width: 250px;
+  transition: all 0.3s ease;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-icon {
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navbar-icon:hover {
+  color: #b3b3b3;
+}
+
+.navbar-profile {
+  position: relative;
+  cursor: pointer;
+}
+
+.profile-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+  
+  .navbar-logo {
+    font-size: 1.5rem;
+  }
+  
+  .search-input {
+    width: 150px;
+  }
+}
